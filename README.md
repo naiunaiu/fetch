@@ -4,14 +4,23 @@ tester
 # [plus]コマンド
 ![test](https://github.com/naiunaiu/robosys2025/actions/workflows/test.yml/badge.svg)
 
-入力した数字を足すやつ
+カレントディレクトリに指定したファイルをコピー/移動させるコマンド。
+
+#　使い方
+- コマンド
+  - [fetch <オプション> <コピー/移動したいファイルの場所> <ファイルの名前>]
+
+-　オプション
+  - -m ... ファイルを移動させる。移動前の場所にファイルは残らない。
+
+  - -c ... ファイルをコピーする。移動前の場所にもファイルが残る。
+
+# インストール方法
 
 
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 
 - このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです.
-
-    - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
 
 # 必要なソフトウェア
 - Python
