@@ -32,7 +32,6 @@ def main():
     args = parser.parse_args()
     
     filelocation = find(args.location, args.name)
-    print(f"Found files: {filelocation}", file=sys.stderr)
     if not filelocation:
         sys.exit(1)
     
@@ -41,7 +40,10 @@ def main():
             shutil.copy2(f, ".")
         elif args.move:
             shutil.move(f, ".")
+            
+    return filelocation
     
     
 if __name__=="__main__":
     main()
+    
