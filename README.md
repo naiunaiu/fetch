@@ -1,18 +1,15 @@
 # robosys2025
-tester
 
-# [plus]コマンド
-![test](https://github.com/naiunaiu/robosys2025/actions/workflows/test.yml/badge.svg)
+# fetchコマンド
+![test]()
 
 カレントディレクトリに指定したファイルをコピー/移動させるコマンド。
 
 #　使い方
 - コマンド
   - [fetch <オプション> <コピー/移動したいファイルの場所> <ファイルの名前>]
-
 -　オプション
   - -m ... ファイルを移動させる。移動前の場所にファイルは残らない。
-
   - -c ... ファイルをコピーする。移動前の場所にもファイルが残る。
 
 # インストール方法

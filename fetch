@@ -32,6 +32,8 @@ def main():
     args = parser.parse_args()
     
     filelocation = find(args.location, args.name)
+    if not filelocation or filelocation == ['']:
+        sys.exit(1)
     
     for f in filelocation:
         if args.copy:
