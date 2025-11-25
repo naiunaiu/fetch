@@ -14,8 +14,9 @@
   - 実行後、とってきたファイルのディレクトリが表示されますが仕様です。
 
 # インストール方法
-  -githubが手元にある…git clone https://github.com/naiunaiu/fetch.git
-  -github持ってない…このリポジトリからzipファイルをダウンロードし、中身のfetchをusr/binに配置する。
+  - githubが手元にある…git clone https://github.com/naiunaiu/fetch.git　これをlinuxで実行することで使用可能。
+
+  - github持ってない…このリポジトリからzipファイルをダウンロードし、中身のfetchをusr/binに配置する。
 
 
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
