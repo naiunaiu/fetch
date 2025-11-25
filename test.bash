@@ -16,27 +16,27 @@ cd test_sys
 
 normal_output_copy="'src/copu.txt'"
 normal_output_move="'src/movu.txt'"
-out_copy=$( ./fetch -c src/ copu.txt)
-out_move=$( ./fetch -m src/ movu.txt)
+out_copy=$( python -u fetch -c src/ copu.txt)
+out_move=$( python -u fetch -m src/ movu.txt)
 exit_code=$?
 
 [ "${out_copy}" = "${normal_output_copy}" ] || ng "$LINENO"
 [ "${out_move}" = "${normal_output_move}" ] || ng "$LINENO"
 
-[ '-f ./copu.txt' ] || ng "$LINENO"
-[ '-f ./movu.txt' ] || ng "$LINENO"
+[ -f ./copu.txt ] || ng "$LINENO"
+[ -f ./movu.txt ] || ng "$LINENO"
 [ ${exit_code} -eq 0 ] || ng "$LINENO"
 
 #以下ダメ
-out_1=$( ./fetch src/ copu.txt) #オプションなし
-out_2=$( ./fetch -m movu.txt) #場所なし
+out_1=$( python -u /fetch src/ copu.txt) #オプションなし
+out_2=$( python -u /fetch -m movu.txt) #場所なし
 exit_code=$?
 
 [ "${out_1}" != "${normal_output_copy}" ] || ng "$LINENO"
 [ "${out_2}" != "${normal_output_move}" ] || ng "$LINENO"
 
-[ "-f ./copu.txt" ] || ng "$LINENO"
-[ "-f ./movu.txt" ] || ng "$LINENO"
+[ -f ./copu.txt ] || ng "$LINENO"
+[ -f ./movu.txt ] || ng "$LINENO"
 [ ${exit_code} -eq 2 ] || ng "$LINENO"
 
 cd ..
