@@ -36,7 +36,7 @@ def main():
         sys.exit(1)
     
     for f in filelocation:
-        print(f"'{f}")
+        print(rept(f))
         if args.copy:
             shutil.copy2(f, ".")
         elif args.move:
