@@ -14,8 +14,8 @@ touch test_sys/src/copu.txt
 touch test_sys/src/movu.txt
 cd test_sys
 
-normal_output_copy="'src/copu.txt'"
-normal_output_move="'src/movu.txt'"
+normal_output_copy='src/copu.txt'
+normal_output_move='src/movu.txt'
 out_copy=$( ../fetch -c src/ copu.txt)
 out_move=$( ../fetch -m src/ movu.txt)
 exit_code=$?
@@ -32,8 +32,8 @@ out_1=$( ../fetch src/ copu.txt) #オプションなし
 out_2=$( ../fetch -m movu.txt) #場所なし
 exit_code=$?
 
-[ "${out_1}" = "${normal_output_copy}" ] || ng "$LINENO"
-[ "${out_2}" = "${normal_output_move}" ] || ng "$LINENO"
+[ "${out_1}" != "${normal_output_copy}" ] || ng "$LINENO"
+[ "${out_2}" != "${normal_output_move}" ] || ng "$LINENO"
 
 [ "-f ./copu.txt" ] || ng "$LINENO"
 [ "-f ./movu.txt" ] || ng "$LINENO"
